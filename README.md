@@ -23,4 +23,10 @@ Configurations that are needed to run this application-
 8. flask
 9. Datetime library of python
 
+MySql Workbench credentials:
+1. MysQl connection name-Attendance
+2. Username=root
+3. password=Vaish12/08
+4. database name=markingattendance
+
 
