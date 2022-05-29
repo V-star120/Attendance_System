@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Company</title>
+   
+    <link  href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    
+    
+    <script type="text/javascript" src="{{url_for('static',filename='js/jquery.min.js')}}"> </script>
+  </head>
+<body>
+    <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+  
+  
+		<!-- ==== HEADERWRAP ==== -->
+	    <div id="headerwrap" id="home" name="home">
+			<header class="clearfix">
+	  		 		<h1 class="animated bounceIn">XYZ Company</h1>
+             <h2 class="animated bounceIn">Attendance Management System</h2>
+             <button type="submit" class="btn-success" onclick='myfunction_clickevent()'>Mark your Attendance</button>
+	  		 	<!----	<p class="animated slideInLeft">Let Us Help You Be Something Awesome.</p>
+	  		 		<p class="animated slideInRight">We Are Here For You.</p>-->
+	
+	  		</header>	    
+	    </div>
+
+    <element onload="myfunction_onload">
+      
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+      
+      <script>
+          function myfunction_onload(){
+              $.ajax({
+                  url: "app.py",
+                   context: document.body
+                  })
+              }
+          </script>
+   
+      <script>
+          function myfunction_clickevent(){
+              $.ajax({
+                  url:"/test",
+                  context: document.body});}
+      </script>
+      <script type="text/javascript" src="{{url_for('static',filename='js/plugins.js')}}"></script>
+      <script type="text/javascript" src="{{url_for('static',filename='js/init.js')}}"></script>
+</body>
+</html>

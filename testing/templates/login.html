@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Authentication</title>
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="/static/css/login.css"/>
+<!-- Include JS File Here -->
+<script src="/static/js/login.js"></script>
+</head>
+<body>
+    {% if error %}
+    {% block content %}
+        <p class="error"><strong>Error:</strong> {{error}}</p>
+        {% endblock content %}
+      {% endif %}
+      <br>
+<div class="container">
+<div class="main">
+<h2>Admin Authentication</h2>
+<form id="form_id" method="post" name="myform" action="/login" >
+<label>User Name :</label>
+<input type="text" name="username" id="username" value="{{
+    request.form.username }}">
+<label>Password :</label>
+<input type="password" name="password" id="password" value="{{
+    request.form.password }}">
+<input type="submit" value="Login" id="buttton" >
+</form>
+
+    
+</div>
+</div>
+
+</body>
+</html>

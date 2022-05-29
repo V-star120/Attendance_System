@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<style>
+   .text div{
+  position:fixed;
+  
+  margin-left:20%;
+  
+  
+   color:whitesmoke;
+   
+
+
+    }
+
+    body{
+        background-image: url('/static/images/dark.jpg');
+        background-size: cover;
+        color:whitesmoke;
+    }
+    h1{
+        text-align: center;
+    margin-top: 2%;
+    font-size: 80px;
+    font-family: 'Tiro Bangla', serif;
+    font-weight: bold;
+    color: whitesmoke;
+    padding:1%;
+    margin-bottom: 1%;
+}
+h2{
+    text-align: center;
+    margin-top: 1%;
+    font-size: 30px;
+    font-family: 'Tiro Bangla', serif;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 2%;;
+}
+p{
+    color:whitesmoke;
+    font-family:sans-serif;
+    margin-left:5%;
+    
+    text-align:center;
+    
+}
+form{
+    text-align: center;
+}
+.message{
+    margin-left:4%;
+}
+</style>
+<body>
+    
+
+<h1> XYZ Company</h1>
+<h2> Attendance Management System</h2>
+<div clas="text"><p>Upload photos of Employees and kindly ensure that the name of file is same as that of the name of person</p> 
+    <br>
+    <p class="message">{{msg}}</p>
+</p>
+
+
+<form action="/uploadfile" method="POST" enctype="multipart/form-data">
+    
+    <input type="file" name="file" accept="image/*" >
+  
+
+ <input type="submit" value="Upload">
+</form>
+</div>
+
+</body>
+</html>
+
